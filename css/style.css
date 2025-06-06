@@ -1,0 +1,57 @@
+body {
+  background: linear-gradient(to right, #e3f2fd, #e8f5e9);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-style-1 {
+  background: linear-gradient(to bottom right, #fff3e0, #ffe0b2);
+}
+
+.card-style-2 {
+  background: linear-gradient(to bottom right, #e1f5fe, #b3e5fc);
+}
+
+.card-style-3 {
+  background: linear-gradient(to bottom right, #e8f5e9, #c8e6c9);
+}
+
+.card-style-add {
+  background: linear-gradient(to bottom right, #f3e5f5, #ce93d8);
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  color: #1a237e;
+}
+
+.btn-primary {
+  background-color: #00897b;
+  border-color: #00897b;
+}
+
+.btn-primary:hover {
+  background-color: #00695c;
+  border-color: #00695c;
+}
+
+footer {
+  background: linear-gradient(to right, #263238, #37474f);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+#addBlogCard {
+  cursor: pointer;
+}

@@ -1,0 +1,60 @@
+<!-- new-blog.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add New Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #f3f4f6, #e0f7fa);
+    }
+    .blog-editor {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+    }
+    .form-control, .form-label {
+      font-size: 1rem;
+    }
+    .form-control {
+      min-height: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container my-5">
+    <div class="blog-editor">
+      <h2 class="mb-4 text-center text-primary">
+        <i class="bi bi-pencil-square me-2"></i>Write Your Blog Post
+      </h2>
+
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Blog Title</label>
+          <input type="text" class="form-control" placeholder="Enter blog title" required />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Image URL</label>
+          <input type="url" class="form-control" placeholder="Paste image URL here" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Content</label>
+          <textarea class="form-control" rows="10" placeholder="Write your full blog content here..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success">Publish Blog</button>
+        <a href="index.html" class="btn btn-secondary ms-2">Cancel</a>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

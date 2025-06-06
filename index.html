@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Blog</title>
+
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <i class="bi bi-journal-text me-2 fs-4"></i> MyBlog
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item" id="loginNav"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+          <li class="nav-item d-none" id="logoutNav"><a class="nav-link text-warning" href="#" onclick="logout()">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Cards -->
+  <div class="container my-5">
+    <div class="row g-4" id="blog-container">
+
+      <!-- Blog Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 card-style-1">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Blog 1">
+          <div class="card-body">
+            <h5 class="card-title">Blog Title 1</h5>
+            <p class="card-text">Short description of blog post one.</p>
+            <a href="blog1.html" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 card-style-2">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Blog 2">
+          <div class="card-body">
+            <h5 class="card-title">Blog Title 2</h5>
+            <p class="card-text">Another short description of a blog post.</p>
+            <a href="blog2.html" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 card-style-3">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Blog 3">
+          <div class="card-body">
+            <h5 class="card-title">Blog Title 3</h5>
+            <p class="card-text">Third blog container is visible from start.</p>
+            <a href="blog3.html" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add New Blog (Admin Only) -->
+      <div class="col-md-4" id="addBlogCard" style="display: none;">
+        <div class="card h-100 shadow-sm text-center d-flex justify-content-center align-items-center card-style-add">
+          <a href="new-blog.html" class="btn btn-outline-success">
+            <i class="bi bi-plus-circle fs-1"></i><br>
+            <span class="fs-5">Add New Blog</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>Follow us on:</p>
+      <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+      <p class="mt-3 mb-0">&copy; 2025 MyBlog. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form id="loginForm">
+          <div class="modal-header">
+            <h5 class="modal-title">Admin Login</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" id="username" class="form-control" required />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" id="password" class="form-control" required />
+            </div>
+            <div id="loginError" class="text-danger d-none">Invalid login credentials!</div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
